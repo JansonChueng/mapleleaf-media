@@ -8,6 +8,7 @@ import Services from './sections/Services'
 import Team from './sections/Team'
 import Portfolio from './sections/Portfolio'
 import Models from './sections/Models'
+import StudioGallery from './sections/StudioGallery'
 import Contact from './sections/Contact'
 
 const FOOTER_LINKS = [
@@ -15,6 +16,7 @@ const FOOTER_LINKS = [
   { label: '核心能力', href: '#capabilities' },
   { label: '服务矩阵', href: '#services' },
   { label: '案例展示', href: '#portfolio' },
+  { label: '影棚空间', href: '#studio' },
 ]
 
 const COMPANY_INFO = [
@@ -37,6 +39,7 @@ export default function App() {
         <Team />
         <Portfolio />
         <Models />
+        <StudioGallery />
         <Contact />
       </main>
       <footer className="relative bg-charcoal border-t border-white/[0.04]">

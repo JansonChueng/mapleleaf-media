@@ -8,6 +8,7 @@ const NAV_ITEMS = [
   { label: '团队设备', href: '#team' },
   { label: '案例展示', href: '#portfolio' },
   { label: '模特资源', href: '#models' },
+  { label: '影棚空间', href: '#studio' },
   { label: '联系我们', href: '#contact' },
 ]
 
