@@ -6,7 +6,6 @@ import BrandPositioning from './sections/BrandPositioning'
 import Capabilities from './sections/Capabilities'
 import Services from './sections/Services'
 import Team from './sections/Team'
-import PlatformData from './sections/PlatformData'
 import Portfolio from './sections/Portfolio'
 import Models from './sections/Models'
 import Contact from './sections/Contact'
@@ -36,7 +35,6 @@ export default function App() {
         <Capabilities />
         <Services />
         <Team />
-        <PlatformData />
         <Portfolio />
         <Models />
         <Contact />

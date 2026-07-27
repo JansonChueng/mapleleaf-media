@@ -6,7 +6,6 @@ const NAV_ITEMS = [
   { label: '核心能力', href: '#capabilities' },
   { label: '服务矩阵', href: '#services' },
   { label: '团队设备', href: '#team' },
-  { label: '平台方法论', href: '#platform' },
   { label: '案例展示', href: '#portfolio' },
   { label: '模特资源', href: '#models' },
   { label: '联系我们', href: '#contact' },

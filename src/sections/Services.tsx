@@ -22,9 +22,9 @@ const SERVICES = [
   },
   {
     icon: (<svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="3" y="7" width="26" height="18" rx="4" stroke="currentColor" strokeWidth="1.5" /><path d="M12 7V5a2 2 0 012-2h4a2 2 0 012 2v2" stroke="currentColor" strokeWidth="1.5" /><circle cx="16" cy="16" r="3" stroke="currentColor" strokeWidth="1.5" /></svg>),
-    en: 'Social Shorts', zh: '社交媒体短视频',
-    desc: '适配 TikTok、Instagram Reels、YouTube Shorts 等平台规格。高频更新保持品牌活跃度，算法优化获取持续流量曝光。',
-    tags: ['TikTok', 'Instagram', 'YouTube'],
+    en: 'Kickstarter Film', zh: '众筹主视频',
+    desc: '从脚本策划到实景拍摄的全流程主视频。专为 Kickstarter、Indiegogo 海外众筹项目量身打造，3 分钟内讲透产品价值与品牌故事，促成转化。',
+    tags: ['Kickstarter', 'Indiegogo', '众筹转化'],
   },
 ]
 

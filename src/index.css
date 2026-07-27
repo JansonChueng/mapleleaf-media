@@ -2,27 +2,40 @@
 
 /* ═══ VI 色彩系统 — 枫叶视界 Maple Leaf Media ═══ */
 @theme {
+  /* 主色 — 枫叶红系 */
   --color-maple-red: #CA1E1C;
   --color-maple-red-light: #EA2D29;
   --color-maple-red-dark: #C71B17;
   --color-maple-burn: #A01816;
-  --color-charcoal: #1A1A1A;
-  --color-charcoal-light: #2D2D2D;
-  --color-charcoal-mid: #3D3D3D;
-  --color-charcoal-card: #242424;
+
+  /* 深色系 — 深炭灰底座 */
+  --color-charcoal: #0F0F0F;
+  --color-charcoal-light: #1A1A1A;
+  --color-charcoal-mid: #2D2D2D;
+  --color-charcoal-card: #181818;
+
+  /* 浅色系 */
   --color-warm-white: #FAFAF8;
   --color-cream: #F5F3EF;
+
+  /* 中性色 */
   --color-gray-mid: #888888;
   --color-gray-border: #E0E0E0;
   --color-gray-soft: #AAAAAA;
+
+  /* 功能色 */
   --color-success: #22C55E;
   --color-warning: #F59E0B;
   --color-error: #EF4444;
+
+  /* ═══ 字体 ═══ */
   --font-display: 'Montserrat', sans-serif;
   --font-body: 'DM Sans', 'Noto Sans SC', sans-serif;
   --font-body-latin: 'DM Sans', sans-serif;
   --font-body-cjk: 'Noto Sans SC', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
+
+  /* ═══ 字号跳跃 ═══ */
   --text-hero: 5.5rem;
   --text-hero-mobile: 2.75rem;
   --text-display: 4rem;
