@@ -2,40 +2,27 @@
 
 /* ═══ VI 色彩系统 — 枫叶视界 Maple Leaf Media ═══ */
 @theme {
-  /* 主色 — 枫叶红系 */
   --color-maple-red: #CA1E1C;
   --color-maple-red-light: #EA2D29;
   --color-maple-red-dark: #C71B17;
   --color-maple-burn: #A01816;
-
-  /* 深色系 — 深炭黑底座 */
   --color-charcoal: #1A1A1A;
   --color-charcoal-light: #2D2D2D;
   --color-charcoal-mid: #3D3D3D;
   --color-charcoal-card: #242424;
-
-  /* 浅色系 */
   --color-warm-white: #FAFAF8;
   --color-cream: #F5F3EF;
-
-  /* 中性色 */
   --color-gray-mid: #888888;
   --color-gray-border: #E0E0E0;
   --color-gray-soft: #AAAAAA;
-
-  /* 功能色 */
   --color-success: #22C55E;
   --color-warning: #F59E0B;
   --color-error: #EF4444;
-
-  /* ═══ 字体 ═══ */
   --font-display: 'Montserrat', sans-serif;
   --font-body: 'DM Sans', 'Noto Sans SC', sans-serif;
   --font-body-latin: 'DM Sans', sans-serif;
   --font-body-cjk: 'Noto Sans SC', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
-
-  /* ═══ 字号跳跃 ═══ */
   --text-hero: 5.5rem;
   --text-hero-mobile: 2.75rem;
   --text-display: 4rem;
@@ -51,72 +38,22 @@
   --text-small: 0.875rem;
 }
 
-/* ═══ 基础样式 — 放在 @layer base 中，确保 Tailwind 工具类可覆盖 ═══ */
 @layer base {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
-  }
-
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
   body {
-    font-family: var(--font-body);
-    font-size: var(--text-body);
-    line-height: 1.65;
-    color: var(--color-warm-white);
-    background: var(--color-charcoal);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
+    font-family: var(--font-body); font-size: var(--text-body); line-height: 1.65;
+    color: var(--color-warm-white); background: var(--color-charcoal);
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden;
   }
-
-  /* 尊重用户动效偏好 */
   @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
   }
-
-  /* 焦点态 */
-  :focus-visible {
-    outline: 2px solid var(--color-maple-red);
-    outline-offset: 3px;
-    border-radius: 2px;
-  }
-
-  /* 选择文本 */
-  ::selection {
-    background: var(--color-maple-red);
-    color: var(--color-warm-white);
-  }
-
-  /* 滚动条 */
-  ::-webkit-scrollbar {
-    width: 6px;
-  }
-  ::-webkit-scrollbar-track {
-    background: var(--color-charcoal);
-  }
-  ::-webkit-scrollbar-thumb {
-    background: var(--color-charcoal-mid);
-    border-radius: 3px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-maple-red);
-  }
-
-  /* 锚点偏移 */
-  section[id] {
-    scroll-margin-top: 5rem;
-  }
+  :focus-visible { outline: 2px solid var(--color-maple-red); outline-offset: 3px; border-radius: 2px; }
+  ::selection { background: var(--color-maple-red); color: var(--color-warm-white); }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--color-charcoal); }
+  ::-webkit-scrollbar-thumb { background: var(--color-charcoal-mid); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-maple-red); }
+  section[id] { scroll-margin-top: 5rem; }
 }
