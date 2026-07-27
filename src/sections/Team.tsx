@@ -10,6 +10,7 @@ const TEAM_ITEMS = [
 const EQUIPMENT = [
   { label: '剪辑技术', value: '专业级' },
   { label: '摄像设备', value: '4K 电影级' },
+  { label: '拍摄场地', value: '自有影棚' },
   { label: '设备管理', value: '自有全链路' },
 ]
 
@@ -29,7 +30,7 @@ export default function Team() {
           ))}
         </div>
         <motion.div initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-60px' }} transition={{ duration: 0.6 }} className="bg-charcoal-card border border-white/[0.04] max-w-3xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-3 divide-x sm:divide-x divide-white/[0.04]">
+          <div className="grid grid-cols-2 sm:grid-cols-4 divide-x sm:divide-x divide-white/[0.04]">
             {EQUIPMENT.map((eq) => <div key={eq.label} className="py-8 lg:py-10 text-center"><p className="font-mono text-[11px] text-white/25 tracking-[0.1em] uppercase mb-3">{eq.label}</p><p className="font-display font-semibold text-base lg:text-lg text-white">{eq.value}</p></div>)}
           </div>
         </motion.div>
