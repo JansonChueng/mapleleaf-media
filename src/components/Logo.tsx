@@ -16,14 +16,5 @@ export default function Logo({ className = '', size = 'md', layout = 'vertical',
   const isHorizontal = layout === 'horizontal'
   const boldColor = textWhite ? 'text-white' : 'text-maple-red-light'
   const lightColor = textWhite ? 'text-white/70' : 'text-maple-red'
-
-  return (
-    <a href="#hero" className={`inline-flex flex-shrink-0 ${isHorizontal ? 'flex-row items-center' : 'flex-col items-center'} ${isHorizontal ? 'gap-2.5' : 'gap-3'} ${className}`} aria-label="枫叶视界 - 返回首页">
-      <img src="/logo.svg" alt="枫叶视界 Logo" width={s.svg} height={s.svg} {...({ fetchPriority: 'high' } as any)} className="flex-shrink-0" />
-      <span className={`flex items-baseline gap-[0.25em] leading-none ${isHorizontal ? '' : 'text-center'}`}>
-        <span className={`font-display font-bold tracking-[0.04em] ${boldColor} uppercase whitespace-nowrap`} style={{ fontSize: s.text }}>MAPLE LEAF</span>
-        <span className={`font-display font-light tracking-[0.12em] ${lightColor} uppercase whitespace-nowrap`} style={{ fontSize: s.textLight }}>MEDIA</span>
-      </span>
-    </a>
-  )
+  return (<a href="#hero" className={`inline-flex flex-shrink-0 ${isHorizontal ? 'flex-row items-center' : 'flex-col items-center'} ${isHorizontal ? 'gap-2.5' : 'gap-3'} ${className}`} aria-label="枫叶视界 - 返回首页"><img src="./logo.svg" alt="枫叶视界 Logo" width={s.svg} height={s.svg} {...({ fetchPriority: 'high' } as any)} className="flex-shrink-0" /><span className={`flex items-baseline gap-[0.25em] leading-none ${isHorizontal ? '' : 'text-center'}`}><span className={`font-display font-bold tracking-[0.04em] ${boldColor} uppercase whitespace-nowrap`} style={{ fontSize: s.text }}>MAPLE LEAF</span><span className={`font-display font-light tracking-[0.12em] ${lightColor} uppercase whitespace-nowrap`} style={{ fontSize: s.textLight }}>MEDIA</span></span></a>)
 }
