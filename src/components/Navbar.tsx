@@ -23,92 +23,34 @@ export default function Navbar() {
   }, [])
 
   useEffect(() => {
-    if (mobileOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
-    }
+    if (mobileOpen) { document.body.style.overflow = 'hidden' }
+    else { document.body.style.overflow = '' }
     return () => { document.body.style.overflow = '' }
   }, [mobileOpen])
 
   const handleNavClick = () => setMobileOpen(false)
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? 'bg-charcoal/95 backdrop-blur-xl shadow-2xl shadow-black/30 py-3'
-          : 'bg-transparent py-5'
-      }`}
-      role="navigation"
-      aria-label="主导航"
-    >
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-charcoal/95 backdrop-blur-xl shadow-2xl shadow-black/30 py-3' : 'bg-transparent py-5'}`} role="navigation" aria-label="主导航">
       <div className="w-full max-w-[80rem] mx-auto px-6 lg:px-12 flex items-center justify-between">
-        {/* Logo */}
-        <Logo
-          size={scrolled ? 'sm' : 'md'}
-          layout="horizontal"
-          textWhite
-          className="transition-all duration-500"
-        />
-
-        {/* Desktop nav */}
+        <Logo size={scrolled ? 'sm' : 'md'} layout="horizontal" textWhite className="transition-all duration-500" />
         <ul className="hidden lg:flex items-center gap-8">
           {NAV_ITEMS.map((item) => (
-            <li key={item.href}>
-              <a
-                href={item.href}
-                className="font-display text-xs font-medium tracking-[0.08em] uppercase text-white/60 hover:text-maple-red transition-colors duration-300"
-              >
-                {item.label}
-              </a>
-            </li>
+            <li key={item.href}><a href={item.href} className="font-display text-xs font-medium tracking-[0.08em] uppercase text-white/60 hover:text-maple-red transition-colors duration-300">{item.label}</a></li>
           ))}
         </ul>
-
-        {/* Mobile toggle */}
-        <button
-          className="lg:hidden flex flex-col gap-1.5 p-2 min-w-[44px] min-h-[44px] items-center justify-center"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-expanded={mobileOpen}
-          aria-controls="mobile-menu"
-          aria-label={mobileOpen ? '关闭菜单' : '打开菜单'}
-        >
+        <button className="lg:hidden flex flex-col gap-1.5 p-2 min-w-[44px] min-h-[44px] items-center justify-center" onClick={() => setMobileOpen(!mobileOpen)} aria-expanded={mobileOpen} aria-controls="mobile-menu" aria-label={mobileOpen ? '关闭菜单' : '打开菜单'}>
           <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${mobileOpen ? 'rotate-45 translate-y-2' : ''}`} />
           <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${mobileOpen ? 'opacity-0' : ''}`} />
           <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${mobileOpen ? '-rotate-45 -translate-y-2' : ''}`} />
         </button>
       </div>
-
-      {/* Mobile menu */}
-      <div
-        id="mobile-menu"
-        className={`lg:hidden fixed inset-0 top-0 z-40 bg-charcoal/98 backdrop-blur-2xl flex flex-col items-center justify-center gap-8 transition-all duration-500 ${
-          mobileOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-        }`}
-        aria-hidden={!mobileOpen}
-      >
+      <div id="mobile-menu" className={`lg:hidden fixed inset-0 top-0 z-40 bg-charcoal/98 backdrop-blur-2xl flex flex-col items-center justify-center gap-8 transition-all duration-500 ${mobileOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`} aria-hidden={!mobileOpen}>
         {NAV_ITEMS.map((item, i) => (
-          <a
-            key={item.href}
-            href={item.href}
-            onClick={handleNavClick}
-            className="font-display text-2xl font-light tracking-[0.15em] uppercase text-white/80 hover:text-maple-red transition-colors duration-300"
-            style={{ transitionDelay: `${i * 60}ms` }}
-            tabIndex={mobileOpen ? 0 : -1}
-          >
-            {item.label}
-          </a>
+          <a key={item.href} href={item.href} onClick={handleNavClick} className="font-display text-2xl font-light tracking-[0.15em] uppercase text-white/80 hover:text-maple-red transition-colors duration-300" style={{ transitionDelay: `${i * 60}ms` }} tabIndex={mobileOpen ? 0 : -1}>{item.label}</a>
         ))}
-        <button
-          className="absolute top-6 right-6 min-w-[44px] min-h-[44px] flex items-center justify-center text-white/60 hover:text-white transition-colors"
-          onClick={() => setMobileOpen(false)}
-          aria-label="关闭菜单"
-          tabIndex={mobileOpen ? 0 : -1}
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M18 6L6 18M6 6l12 12" />
-          </svg>
+        <button className="absolute top-6 right-6 min-w-[44px] min-h-[44px] flex items-center justify-center text-white/60 hover:text-white transition-colors" onClick={() => setMobileOpen(false)} aria-label="关闭菜单" tabIndex={mobileOpen ? 0 : -1}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12" /></svg>
         </button>
       </div>
     </nav>
