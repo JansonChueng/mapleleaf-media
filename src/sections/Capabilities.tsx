@@ -5,8 +5,8 @@ const CAPABILITIES = [
   {
     num: '01',
     title: '海外市场洞察',
-    desc: '深谙海外消费者的视觉审美与决策心理，理解不同市场的文化差异与高端品牌质感，让每一支片子都能在 Kickstarter、独立站、品牌官网上精准呈现产品价值。',
-    tags: ['消费者洞察', '文化适配', '高端品牌质感'],
+    desc: '深谙 TikTok、Instagram、YouTube 等海外平台算法逻辑与用户偏好，精准把握不同市场的文化差异与审美趋势，确保内容策略与目标市场高度匹配。',
+    tags: ['平台算法', '文化适配', '趋势研判'],
   },
   {
     num: '02',
@@ -35,9 +35,7 @@ export default function Capabilities() {
               <h3 className="font-display font-semibold text-xl lg:text-2xl text-white mb-5 tracking-[-0.01em]">{cap.title}</h3>
               <p className="text-white/40 text-body-mobile lg:text-body leading-relaxed flex-grow mb-6">{cap.desc}</p>
               <div className="flex flex-wrap gap-2">
-                {cap.tags.map((tag) => (
-                  <span key={tag} className="font-mono text-[11px] text-white/25 border border-white/[0.06] px-3 py-1.5 tracking-[0.04em]">{tag}</span>
-                ))}
+                {cap.tags.map((tag) => (<span key={tag} className="font-mono text-[11px] text-white/25 border border-white/[0.06] px-3 py-1.5 tracking-[0.04em]">{tag}</span>))}
               </div>
             </motion.div>
           ))}

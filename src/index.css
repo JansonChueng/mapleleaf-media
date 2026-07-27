@@ -8,11 +8,11 @@
   --color-maple-red-dark: #C71B17;
   --color-maple-burn: #A01816;
 
-  /* 深色系 — 深炭灰底座 */
-  --color-charcoal: #0F0F0F;
-  --color-charcoal-light: #1A1A1A;
-  --color-charcoal-mid: #2D2D2D;
-  --color-charcoal-card: #181818;
+  /* 深色系 — 深灰底座 */
+  --color-charcoal: #2A2A2A;
+  --color-charcoal-light: #333333;
+  --color-charcoal-mid: #444444;
+  --color-charcoal-card: #2F2F2F;
 
   /* 浅色系 */
   --color-warm-white: #FAFAF8;
