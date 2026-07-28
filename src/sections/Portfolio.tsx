@@ -13,7 +13,7 @@ const CASES = [
 function VideoCard({ c }: { c: typeof CASES[0] & { type: 'video' } }) {
   return (
     <motion.a href={c.link} target="_blank" rel="noopener noreferrer" initial={{ opacity: 0, y: 36 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-40px' }} transition={{ duration: 0.5 }} className="group relative block overflow-hidden bg-charcoal-card border border-white/[0.04] min-h-[280px] cursor-pointer hover:border-maple-red transition-colors duration-500">
-      <img src={c.thumb} alt={c.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+      <img src={c.thumb} alt={c.title} loading="lazy" decoding="async" width={800} height={449} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
       <div className="absolute inset-0 flex items-center justify-center"><div className="w-16 h-16 rounded-full bg-white/15 backdrop-blur-sm border border-white/30 flex items-center justify-center transition-all duration-500 group-hover:bg-maple-red group-hover:border-maple-red group-hover:scale-110"><svg width="22" height="22" viewBox="0 0 24 24" fill="white" className="ml-1"><path d="M5 3l16 9-16 9V3z" /></svg></div></div>
       <div className="absolute top-0 left-0 right-0 p-6 lg:p-8 z-10">

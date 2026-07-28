@@ -15,7 +15,7 @@ export default function Models() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 lg:gap-4">
             {[{ name: 'LEVL', file: 'male_20_1.webp' },{ name: 'GUI', file: 'male_21_0.webp' },{ name: 'DAVID', file: 'male_23_2.webp' },{ name: 'NIKITA', file: 'male_18_0.webp' },{ name: 'THEO', file: 'male_28_0.webp' }].map((m) => (
               <div key={m.file} className="group relative aspect-[3/4] overflow-hidden bg-charcoal-card border border-white/[0.03]">
-                <img src={`./images/models/${m.file}`} alt={`外籍男模 ${m.name}`} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src={`./images/models/${m.file}`} alt={`外籍男模 ${m.name}`} loading="lazy" decoding="async" width={640} height={853} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute bottom-0 left-0 right-0 px-3 py-2 bg-gradient-to-t from-black/55 to-transparent"><span className="font-display font-semibold text-xs tracking-[0.15em] text-white uppercase">{m.name}</span></div>
               </div>
             ))}
@@ -30,7 +30,7 @@ export default function Models() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 lg:gap-4">
             {[{ name: 'ELISA', file: 'female_31_3.webp' },{ name: 'SOPHIA', file: 'female_32_0.webp' },{ name: 'LUNA', file: 'female_33_0.webp' },{ name: 'ESTAR', file: 'female_34_0.webp' },{ name: 'LUANA', file: 'female_35_1.webp' }].map((m) => (
               <div key={m.file} className="group relative aspect-[3/4] overflow-hidden bg-charcoal-card border border-white/[0.03]">
-                <img src={`./images/models/${m.file}`} alt={`外籍女模 ${m.name}`} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src={`./images/models/${m.file}`} alt={`外籍女模 ${m.name}`} loading="lazy" decoding="async" width={640} height={853} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute bottom-0 left-0 right-0 px-3 py-2 bg-gradient-to-t from-black/55 to-transparent"><span className="font-display font-semibold text-xs tracking-[0.15em] text-white uppercase">{m.name}</span></div>
               </div>
             ))}

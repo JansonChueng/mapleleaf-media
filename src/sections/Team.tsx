@@ -20,7 +20,7 @@ export default function Team() {
       {/* 影棚背景图（极低透明度，不抢文字） */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-[0.08]"
-        style={{ backgroundImage: 'url(./images/studio-bg.jpg)' }}
+        style={{ backgroundImage: 'url(./images/studio-bg.webp)' }}
         aria-hidden="true"
       />
       {/* 暗色蒙版，保证文字可读 */}
