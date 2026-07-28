@@ -107,28 +107,6 @@ export default function StudioGallery() {
             </motion.div>
           ))}
         </div>
-
-        {/* 底部数字背书 */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.6 }}
-          className="grid grid-cols-3 gap-0 border-t border-white/[0.06] max-w-3xl mx-auto"
-        >
-          <div className="text-center py-8 border-r border-white/[0.06]">
-            <p className="font-display font-bold text-3xl lg:text-4xl text-white">1000<span className="text-maple-red">㎡</span></p>
-            <p className="font-mono text-[11px] text-white/40 tracking-[0.1em] uppercase mt-2">自营影棚</p>
-          </div>
-          <div className="text-center py-8 border-r border-white/[0.06]">
-            <p className="font-display font-bold text-3xl lg:text-4xl text-white">6<span className="text-maple-red">+</span></p>
-            <p className="font-mono text-[11px] text-white/40 tracking-[0.1em] uppercase mt-2">主题场景</p>
-          </div>
-          <div className="text-center py-8">
-            <p className="font-display font-bold text-3xl lg:text-4xl text-white">∞</p>
-            <p className="font-mono text-[11px] text-white/40 tracking-[0.1em] uppercase mt-2">一站拍齐</p>
-          </div>
-        </motion.div>
       </div>
     </section>
   )
