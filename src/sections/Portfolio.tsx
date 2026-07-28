@@ -1,17 +1,88 @@
 import { motion } from 'framer-motion'
 import SectionTitle from '../components/SectionTitle'
 
+const PERSONAS = [
+  {
+    icon: '🚀',
+    role: 'Kickstarter 创始人',
+    pain: '「我有产品 idea，第一次上 KS，视频怎么拍才不翻车？」',
+    cta: '看众筹爆款 →',
+  },
+  {
+    icon: '🏪',
+    role: '���立站主理人',
+    pain: '「D2C 品牌刚到海外，需要一支视频让陌生消费者愿意下单」',
+    cta: '看独立站案例 →',
+  },
+  {
+    icon: '📊',
+    role: 'D2C 品牌 CMO',
+    pain: '「公司要出海，给我一个能说服老板的视觉方案」',
+    cta: '看品牌案例 →',
+  },
+]
+
 const CASES = [
-  { type: 'video', category: 'Kickstarter · 海外众筹', title: '以专业铸精品，凭实力赢复购认可', desc: '音乐摄像仪二代再次携手！从脚本策划、实景拍摄到精剪成片，用心打磨每一个镜头，放大产品核心优势。专业实力收获客户二次选择，用作品说话，用效果出圈。', tags: ['众筹视频', 'Kickstarter', '宣传片'], thumb: './images/portfolio/xiaohongshu-02-thumb.png', link: 'https://www.xiaohongshu.com/explore/6a6314e1000000000f01fe54?xsec_source=pc_creatormng' },
-  { type: 'video', category: 'TVC 众筹 · 情怀拍摄', title: '把 90 后童年电子宠物，拍成治愈 TVC', desc: '为 Sweekar 宠物蛋打造众筹 TVC，暖调柔光 + 生活化场景，复古色调唤醒 90 后童年记忆，镜头讲述陪伴与治愈的故事，轻松突破百万众筹。', tags: ['产品TVC', '众筹拍摄', '科技产品摄影'], thumb: './images/portfolio/xiaohongshu-03-thumb.png', link: 'https://www.xiaohongshu.com/explore/6a631b99000000000f02a33e?xsec_source=pc_creatormng' },
-  { type: 'video', category: 'TVC 大片 · 电商产品摄影', title: '除草机器人也能拍出电影感', desc: '为 Rokibot G7 打造 TVC 大片，电��级光影 + 低角度镜头 + 黄金时段柔光，极简庭院场景放大工业美学，赋予科技产品温度与高级感。', tags: ['产品TVC', '科技摄影', '商业摄影'], thumb: './images/portfolio/xiaohongshu-04-thumb.png', link: 'https://www.xiaohongshu.com/explore/6a66c5a7000000000f010076?xsec_source=pc_creatormng' },
-  { type: 'video', category: 'TVC 大片 · 家电产品摄影', title: '看不见的风，拍得出高级感', desc: '为 COZEWARE FreshFlow 打造众筹 TVC，自然光 + 动态气流特效直观呈现洁净空气流动感，极简构图凸显科技美学与静音质感，帮品牌在众筹中快速出圈。', tags: ['产品TVC', '商业摄影', '科技产品'], thumb: './images/portfolio/xiaohongshu-05-thumb.png', link: 'https://www.xiaohongshu.com/explore/6a66c9110000000014004cfe?xsec_source=pc_creatormng' },
-  { type: 'video', category: '众筹爆款续作 · 家电 TVC', title: '百万众筹续作！制冰机大片又来炸场', desc: 'APWCHE 再次选择我们，黑调光影 + 电影级质感，动态镜头呈现制冰速度，生活化 + 户外车载场景还原全场景体验。能被爆款品牌重复选择，靠的是懂产品、懂众筹用户的叙事能力。', tags: ['众筹视频', '品牌出海', '产品摄影'], thumb: './images/portfolio/xiaohongshu-06-thumb.png', link: 'https://www.xiaohongshu.com/explore/6a66cc6a000000000c017b94?xsec_source=pc_creatormng' },
-  { type: 'video', category: '海外众筹 · $500K 战绩', title: '$500K 战绩：让音乐有温度', desc: '音乐摄像仪众筹突破 50 万美金！从前期反复沟通产品亮点，到打磨脚本突出高画质便携设计，再到精心剪辑戳中用户需求，每一步都不敢马虎。专业的事交给专业的人。', tags: ['海外众筹', '视频制作', '音乐摄像仪'], thumb: './images/portfolio/xiaohongshu-07-thumb.png', link: 'https://www.xiaohongshu.com/explore/68f9c51000000000050389d8?xsec_source=pc_creatormng' },
+  { type: 'video', category: 'Kickstarter · 海外众筹', title: '以专业铸精品，凭实力赢复购认可', desc: '音乐摄像仪二代再次携手！从脚本策划、实景拍摄到精剪成片，用心打磨每一个镜头，放大产品核心优势。专业实力收获客户二次选择，用作品说话，用效果出圈。', tags: ['众筹视频', 'Kickstarter', '宣传片'], thumb: './images/portfolio/xiaohongshu-02-thumb.webp', link: 'https://www.xiaohongshu.com/explore/6a6314e1000000000f01fe54?xsec_source=pc_creatormng' },
+  { type: 'video', category: 'TVC 众筹 · 情怀拍摄', title: '把 90 后童年电子宠物，拍成治愈 TVC', desc: '为 Sweekar 宠物蛋打造众筹 TVC，暖调柔光 + 生活化场景，复古色调唤醒 90 后童年记忆，镜头讲述陪伴与治愈的故事，轻松突破百万众筹。', tags: ['产品TVC', '众筹拍摄', '科技产品摄影'], thumb: './images/portfolio/xiaohongshu-03-thumb.webp', link: 'https://www.xiaohongshu.com/explore/6a631b99000000000f02a33e?xsec_source=pc_creatormng' },
+  { type: 'video', category: 'TVC 大片 · 电商产品摄影', title: '除草机器人也能拍出电影感', desc: '为 Rokibot G7 打造 TVC 大片，电影级光影 + 低角度镜头 + 黄金时段柔光，极简庭院场景放大工业美学，赋予科技产品温度与高级感。', tags: ['产品TVC', '科技摄影', '商业摄影'], thumb: './images/portfolio/xiaohongshu-04-thumb.webp', link: 'https://www.xiaohongshu.com/explore/6a66c5a7000000000f010076?xsec_source=pc_creatormng' },
+  { type: 'video', category: 'TVC 大片 · 家电产品摄影', title: '看不见的风，拍得出高级感', desc: '为 COZEWARE FreshFlow 打造众筹 TVC，自然光 + 动态气流特效直观呈现洁净空气流动感，极简构图凸显科技美学与静音质感，帮品牌在众筹中快速出圈。', tags: ['产品TVC', '商业摄影', '科技产品'], thumb: './images/portfolio/xiaohongshu-05-thumb.webp', link: 'https://www.xiaohongshu.com/explore/6a66c9110000000014004cfe?xsec_source=pc_creatormng' },
+  { type: 'video', category: '众筹爆款续作 · 家电 TVC', title: '百万众筹续作！制冰机大片又来炸场', desc: 'APWCHE 再次选择我们，黑调光影 + 电影级质感，动态镜头呈现制冰速度，生活化 + 户外车载场景还原全场景体验。能被爆款品牌重复选择，靠的是懂产品、懂众筹用户的叙事能力。', tags: ['众筹视频', '品牌出海', '产品摄影'], thumb: './images/portfolio/xiaohongshu-06-thumb.webp', link: 'https://www.xiaohongshu.com/explore/6a66cc6a000000000c017b94?xsec_source=pc_creatormng' },
+  { type: 'video', category: '海外众筹 · $500K 战绩', title: '$500K 战绩：让音乐有温度', desc: '音乐摄像仪众筹突破 50 万美金！从前期反复沟通产品亮点，到打磨脚本突出高画质便携设计，再到精心剪辑戳中用户需求，每一步都不敢马虎。专业的事交给专业的人。', tags: ['海外众筹', '视频制作', '音乐摄像仪'], thumb: './images/portfolio/xiaohongshu-07-thumb.webp', link: 'https://www.xiaohongshu.com/explore/68f9c51000000000050389d8?xsec_source=pc_creatormng' },
 ]
 
 function VideoCard({ c }: { c: typeof CASES[0] & { type: 'video' } }) {
-  return (<motion.a href={c.link} target="_blank" rel="noopener noreferrer" initial={{ opacity: 0, y: 36 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-40px' }} transition={{ duration: 0.5 }} className="group relative block overflow-hidden bg-charcoal-card border border-white/[0.04] min-h-[280px] cursor-pointer hover:border-maple-red transition-colors duration-500"><img src={c.thumb} alt={c.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" /><div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" /><div className="absolute inset-0 flex items-center justify-center"><div className="w-16 h-16 rounded-full bg-white/15 backdrop-blur-sm border border-white/30 flex items-center justify-center transition-all duration-500 group-hover:bg-maple-red group-hover:border-maple-red group-hover:scale-110"><svg width="22" height="22" viewBox="0 0 24 24" fill="white" className="ml-1"><path d="M5 3l16 9-16 9V3z" /></svg></div></div><div className="absolute top-0 left-0 right-0 p-6 lg:p-8 z-10"><span className="font-mono text-[10px] text-maple-red-light tracking-[0.12em] uppercase mb-1.5 block">{c.category}</span><h3 className="font-display font-semibold text-lg text-white mb-1.5 tracking-[-0.01em] group-hover:text-maple-red-light transition-colors">{c.title}</h3><p className="text-white/70 text-sm leading-relaxed line-clamp-2">{c.desc}</p></div>{c.tags && c.tags.length > 0 && (<div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8 z-10 flex flex-wrap gap-1.5">{c.tags.map((t) => <span key={t} className="font-mono text-[10px] text-white/50 tracking-[0.04em] border border-white/15 px-2 py-0.5">#{t}</span>)}</div>)}<div className="absolute bottom-5 right-5 z-10 text-white/40 group-hover:text-maple-red transition-colors"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" /></svg></div></motion.a>)}
+  return (
+    <motion.a href={c.link} target="_blank" rel="noopener noreferrer" initial={{ opacity: 0, y: 36 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-40px' }} transition={{ duration: 0.5 }} className="group relative block overflow-hidden bg-charcoal-card border border-white/[0.04] min-h-[280px] cursor-pointer hover:border-maple-red transition-colors duration-500">
+      <img src={c.thumb} alt={c.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+      <div className="absolute inset-0 flex items-center justify-center"><div className="w-16 h-16 rounded-full bg-white/15 backdrop-blur-sm border border-white/30 flex items-center justify-center transition-all duration-500 group-hover:bg-maple-red group-hover:border-maple-red group-hover:scale-110"><svg width="22" height="22" viewBox="0 0 24 24" fill="white" className="ml-1"><path d="M5 3l16 9-16 9V3z" /></svg></div></div>
+      <div className="absolute top-0 left-0 right-0 p-6 lg:p-8 z-10">
+        <span className="font-mono text-[10px] text-maple-red-light tracking-[0.12em] uppercase mb-1.5 block">{c.category}</span>
+        <h3 className="font-display font-semibold text-lg text-white mb-1.5 tracking-[-0.01em] group-hover:text-maple-red-light transition-colors">{c.title}</h3>
+        <p className="text-white/70 text-sm leading-relaxed line-clamp-2">{c.desc}</p>
+      </div>
+      {c.tags && c.tags.length > 0 && (<div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8 z-10 flex flex-wrap gap-1.5">{c.tags.map((t) => <span key={t} className="font-mono text-[10px] text-white/50 tracking-[0.04em] border border-white/15 px-2 py-0.5">#{t}</span>)}</div>)}
+      <div className="absolute bottom-5 right-5 z-10 text-white/40 group-hover:text-maple-red transition-colors"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" /></svg></div>
+    </motion.a>
+  )
+}
 
 export default function Portfolio() {
-  return (<section id="portfolio" className="relative py-24 lg:py-36 overflow-hidden flex justify-center"><div className="absolute inset-0 bg-charcoal" /><div className="relative z-20 w-full max-w-[80rem] px-6 lg:px-12"><SectionTitle overline="Selected Works" title="案例作品展示" subtitle="每一帧都经过精心打磨，为品牌创造真正的商业价值" light /><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">{CASES.map((c) => <VideoCard key={c.title} c={c as any} />)}</div></div></section>)}
+  return (
+    <section id="portfolio" className="relative py-24 lg:py-36 overflow-hidden flex justify-center">
+      <div className="absolute inset-0 bg-charcoal" />
+      <div className="relative z-20 w-full max-w-[80rem] px-6 lg:px-12">
+        <SectionTitle overline="Selected Works" title="案例作品展示" subtitle="每一帧都经过精心打磨，为品牌创造真正的商业价值" light />
+
+        {/* 客户画像卡 — 让客户找到自己 */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 mb-10">
+          {PERSONAS.map((p, i) => (
+            <motion.div
+              key={p.role}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
+              className="bg-charcoal-card border border-white/[0.06] p-6 lg:p-7 group hover:border-maple-red/50 transition-all duration-400 cursor-pointer"
+              onClick={() => document.querySelectorAll('.case-grid')[0]?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              <span className="text-3xl mb-3 block">{p.icon}</span>
+              <h4 className="font-display font-semibold text-base text-white mb-2 tracking-[-0.01em] group-hover:text-maple-red-light transition-colors">
+                {p.role}
+              </h4>
+              <p className="text-white/40 text-sm leading-relaxed mb-4 italic">
+                {p.pain}
+              </p>
+              <span className="font-mono text-[10px] text-maple-red-light tracking-[0.1em] uppercase group-hover:tracking-[0.14em] transition-all">
+                {p.cta}
+              </span>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5 case-grid">{CASES.map((c) => <VideoCard key={c.title} c={c as any} />)}</div>
+      </div>
+    </section>
+  )
+}
