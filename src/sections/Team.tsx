@@ -17,14 +17,14 @@ const EQUIPMENT = [
 export default function Team() {
   return (
     <section id="team" className="relative py-24 lg:py-36 overflow-hidden flex justify-center">
-      {/* 影棚背景图（极低透明度，不抢文字） */}
+      {/* 影棚背景图（适度可见，营造氛围） */}
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-[0.08]"
+        className="absolute inset-0 bg-cover bg-center opacity-40"
         style={{ backgroundImage: 'url(./images/studio-bg.webp)' }}
         aria-hidden="true"
       />
-      {/* 暗色蒙版，保证文字可读 */}
-      <div className="absolute inset-0 bg-charcoal/85" />
+      {/* 渐变蒙版：上下压暗保文字可读，中部露出背景图 */}
+      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/90 via-charcoal/55 to-charcoal/90" />
       <div className="relative z-20 w-full max-w-[80rem] px-6 lg:px-12">
         <SectionTitle overline="Team & Equipment" title="专业团队 · 自有设备" subtitle="从创意到交付的全流程自有体系，确保品质可控、响应高效" light />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16">
